@@ -42,7 +42,7 @@ function ImageUpload() {
             duration: 5000,
             description: 'La imagen procesada se ha descargado automáticamente.'
           })
-          setFiles([]) // Limpiar el archivo después de procesar
+          setFiles([])
         } else {
           console.error('Background removal failed:', error)
           toast.error({
