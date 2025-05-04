@@ -21,6 +21,8 @@ Este proyecto es una aplicación web diseñada para eliminar el fondo de imágen
 - **Toast (pheralb)**: Utilizado para mostrar notificaciones rápidas y elegantes en la aplicación.
 - **Tailwind CSS**: Framework de CSS para diseñar interfaces modernas y responsivas de manera eficiente.
 - **FilePond**: Biblioteca para la carga de archivos con soporte para múltiples características como previsualización y validación.
+- **MictlanUI**: Biblioteca de componentes para interfaces de usuario modernas y minimalistas.
+- **Mictlan Collection**: Colección de componentes animados hechos con React y Tailwind CSS.
 
 ## Contribuciones
 
