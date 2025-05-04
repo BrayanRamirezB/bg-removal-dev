@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { FilePond, registerPlugin } from 'react-filepond'
 import 'filepond/dist/filepond.min.css'
 import { toast } from '@pheralb/toast'
+import TiltCard from './TiltCard'
+import Spinner from './Spinner'
 
 // Plugins
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
@@ -58,9 +60,9 @@ function ImageUpload() {
   }
 
   return (
-    <div className='py-10 w-full flex flex-col items-center justify-center'>
+    <div className='py-5 w-full min-h-[560px] flex flex-col items-center justify-center gap-y-2'>
       <FilePond
-        className='w-[450px] h-[400px] rounded-3xl border-2 border-dashed'
+        className='w-[500px] h-[400px] rounded-3xl border-2 border-dashed'
         files={files}
         onupdatefiles={setFiles}
         allowMultiple={false}
@@ -70,14 +72,21 @@ function ImageUpload() {
         acceptedFileTypes={['image/*']}
         fileValidateTypeLabelExpectedTypes='Solo se permiten imágenes'
       />
+
       {files.length > 0 && (
-        <button
-          onClick={handleBackgroundRemoval}
-          className='mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600'
-          disabled={isProcessing}
-        >
-          {isProcessing ? 'Processing...' : 'Remove Background'}
-        </button>
+        <TiltCard>
+          <button
+            onClick={handleBackgroundRemoval}
+            className={`px-6 py-3 min-w-[200px] text-xl font-semibold ${
+              isProcessing
+                ? ' bg-zinc-900/70'
+                : ' bg-blue-700/70 hover:bg-blue-900/70 cursor-pointer'
+            } saturate-150 rounded-lg transition-color duration-300 ease-in-out`}
+            disabled={isProcessing}
+          >
+            {isProcessing ? <Spinner color='warning' /> : 'Eliminar Fondo'}
+          </button>
+        </TiltCard>
       )}
     </div>
   )
