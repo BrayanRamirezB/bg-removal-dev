@@ -85,7 +85,7 @@ function ImageUpload() {
   return (
     <div className='py-5 w-full min-h-[560px] flex flex-col items-center justify-center gap-y-2'>
       <FilePond
-        className='w-[500px] h-[400px] rounded-3xl border-2 border-dashed'
+        className='w-[500px] h-[400px]'
         files={files}
         onupdatefiles={setFiles}
         allowMultiple={false}

@@ -12,6 +12,7 @@
   filter: saturate(1.5) !important;
   backdrop-filter: blur(12px) !important;
   border-radius: 24px !important;
+  border: 4px dashed #fafafa !important;
 }
 
 .filepond--drop-label {
@@ -24,4 +25,9 @@
   transform: translate(-50%, -50%) !important;
   text-align: center !important;
   width: 100% !important;
+}
+
+.filepond--drip-blob {
+  background-color: #de443b !important;
+  opacity: 1 !important;
 }
