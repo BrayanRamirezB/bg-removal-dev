@@ -31,3 +31,7 @@
   background-color: #de443b !important;
   opacity: 1 !important;
 }
+
+.filepond--action-remove-item {
+  cursor: pointer !important;
+}
