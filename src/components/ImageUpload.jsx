@@ -4,7 +4,7 @@ import 'filepond/dist/filepond.min.css'
 import { toast } from '@pheralb/toast'
 import TiltCard from './TiltCard'
 import Spinner from './Spinner'
-import AnimatedImage from './AnimatedImage'
+import Samples from './Samples'
 
 // Plugins
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
@@ -120,39 +120,8 @@ function ImageUpload() {
         <h2 className='text-xl font-semibold'>
           O intenta con una de estas imágenes de muestra:
         </h2>
-        <div className='flex items-center justify-center gap-x-4'>
-          <AnimatedImage
-            src={'./samples/img1.webp'}
-            alt='Imagen de muestra 1'
-            size={150}
-            duration={300}
-            onClick={() => handleAddSampleImage('./samples/img1.webp')}
-          />
 
-          <AnimatedImage
-            src={'./samples/img2.webp'}
-            alt='Imagen de muestra 2'
-            size={150}
-            duration={300}
-            onClick={() => handleAddSampleImage('./samples/img2.webp')}
-          />
-
-          <AnimatedImage
-            src={'./samples/img3.webp'}
-            alt='Imagen de muestra 3'
-            size={150}
-            duration={300}
-            onClick={() => handleAddSampleImage('./samples/img3.webp')}
-          />
-
-          <AnimatedImage
-            src={'./samples/img4.webp'}
-            alt='Imagen de muestra 4'
-            size={150}
-            duration={300}
-            onClick={() => handleAddSampleImage('./samples/img4.webp')}
-          />
-        </div>
+        <Samples handleAddSampleImage={handleAddSampleImage} />
       </section>
     </div>
   )
